@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hampton Roads' Trusted Real Estate Team - MR Rivera Realty</title>
+    <meta name="description" content="Simple, Streamlined, and Stress-Free Real Estate Experience in Hampton Roads, VA. Same-day callback guaranteed!">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        .form-shadow {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+            transform: translateY(-1px);
+        }
+        .pulse-cta {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        .input-focus {
+            transition: all 0.3s ease;
+        }
+        .input-focus:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center px-4 py-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Hampton Roads' <span class="text-yellow-300">Trusted</span> Real Estate Team
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">
+                Simple, Streamlined, and Stress-Free Real Estate Experience
+            </p>
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
+                <p class="text-lg md:text-xl font-medium">
+                    <i class="fas fa-star text-yellow-300 mr-2"></i>
+                    We Handle the Hard Stuff So You Can Focus on Your Future
+                </p>
+            </div>
+            <a href="#consultation-form" class="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold inline-block pulse-cta">
+                <i class="fas fa-calendar-check mr-2"></i>
+                Get Your FREE Consultation
+            </a>
+            <p class="text-sm mt-4 opacity-90">
+                <i class="fas fa-clock mr-1"></i> Same-day callback guaranteed!
+            </p>
+        </div>
+    </section>
+
+    <!-- Lead Capture Form -->
+    <section id="consultation-form" class="py-16 bg-gray-50">
+        <div class="max-w-2xl mx-auto px-4">
+            <div class="bg-white rounded-2xl form-shadow p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">
+                        Get Your Free Real Estate Consultation & Property Analysis
+                    </h2>
+                    <p class="text-blue-600 font-semibold text-lg">
+                        <i class="fas fa-phone mr-2"></i>Same-day callback guaranteed!
+                    </p>
+                </div>
+                
+                <form class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">First Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Last Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">I'm interested in:</label>
+                        <select class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                            <option>Buying a home</option>
+                            <option>Selling my home</option>
+                            <option>Investment properties</option>
+                            <option>Rental properties</option>
+                            <option>Market analysis</option>
+                            <option>General consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Preferred Contact Method</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                                <option>Phone</option>
+                                <option>Email</option>
+                                <option>Text</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Best Time to Contact</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none">
+                                <option>Morning</option>
+                                <option>Afternoon</option>
+                                <option>Evening</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Questions or Comments (Optional)</label>
+                        <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg input-focus focus:border-blue-500 focus:outline-none" placeholder="Tell us about your real estate goals..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Get My FREE Consultation
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-16 bg-blue-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Why Choose MR Rivera Realty?
+                </h2>
+                <p class="text-xl text-gray-600">Decades of experience with personalized, respectful service</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-check text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Decades of Experience</h3>
+                    <p class="text-gray-600">Deep local market knowledge and proven track record</p>
+                </div>
+                
+                <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Complete Support</h3>
+                    <p class="text-gray-600">Before, during, and after closing assistance</p>
+                </div>
+                
+                <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Personalized Process</h3>
+                    <p class="text-gray-600">Respectful, tailored approach to your needs</p>
+                </div>
+                
+                <div class="text-center bg-white p-6 rounded-xl shadow-lg">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Local Specialists</h3>
+                    <p class="text-gray-600">Hampton Roads area expertise and connections</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Expertise -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Communities We Serve
+                </h2>
+                <p class="text-xl text-gray-600">Hampton Roads local market experts</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-home text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Virginia Beach</h3>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-home text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Norfolk</h3>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-home text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Newport News</h3>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-home text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Chesapeake</h3>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-home text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Portsmouth</h3>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-home text-blue-600 text-3xl mb-3"></i>
+                    <h3 class="font-bold text-lg">Suffolk</h3>
+                </div>
+            </div>
+            
+            <div class="bg-blue-600 text-white p-8 rounded-2xl text-center">
+                <i class="fas fa-medal text-yellow-300 text-4xl mb-4"></i>
+                <h3 class="text-2xl font-bold mb-4">Military-Friendly Services</h3>
+                <p class="text-lg">Proud to serve our military families with specialized knowledge of military relocations, VA loans, and base proximity considerations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Partners -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Trusted Mortgage Partners for Seamless Financing
+                </h2>
+                <p class="text-xl text-gray-600">Pre-qualified buyers • Competitive rates • Coordinated closing process</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mi Casa Mortgage -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-home text-green-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Mi Casa Mortgage</h3>
+                        <p class="text-lg font-semibold text-green-600">Barry Sharif, Loan Officer</p>
+                        <p class="text-sm text-gray-600">Powered by Cornerstone First Mortgage</p>
+                        <p class="text-sm text-gray-500">NMLS ID #528759</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-language text-green-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Bilingual Services</h4>
+                                <p class="text-gray-600">English & Spanish</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-users text-green-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Minority Community Programs</h4>
+                                <p class="text-gray-600">Specialized programs and support for minority homebuyers, including down payment assistance and community-focused lending solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-handshake text-green-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Local Expertise</h4>
+                                <p class="text-gray-600">Deep understanding of Hampton Roads market</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coastal Mortgage -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-anchor text-blue-600 text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Coastal Mortgage</h3>
+                        <p class="text-lg font-semibold text-blue-600">David Elshanti, Loan Officer</p>
+                        <p class="text-sm text-gray-600">Partnered with Supreme Lending</p>
+                        <p class="text-sm text-gray-500">NMLS ID #1098230</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-language text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Bilingual Services</h4>
+                                <p class="text-gray-600">English & Arabic</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-shield-alt text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Heroes Community Programs</h4>
+                                <p class="text-gray-600">Specialized lending programs for military, veterans, health professionals, first responders, teachers, and other community heroes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-star text-blue-600 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold">Competitive Rates</h4>
+                                <p class="text-gray-600">Excellent loan programs and closing coordination</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    What Our Clients Say
+                </h2>
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-star text-yellow-400 text-2xl mx-1"></i>
+                    <i class="fas fa-star text-yellow-400 text-2xl mx-1"></i>
+                    <i class="fas fa-star text-yellow-400 text-2xl mx-1"></i>
+                    <i class="fas fa-star text-yellow-400 text-2xl mx-1"></i>
+                    <i class="fas fa-star text-yellow-400 text-2xl mx-1"></i>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-quote-left text-blue-600 text-2xl mr-3"></i>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4">
+                        "We couldn't ask for better realtors. You guys are the perfect team."
+                    </p>
+                    <p class="text-gray-600 font-semibold">- Happy Hampton Roads Client</p>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-quote-left text-blue-600 text-2xl mr-3"></i>
+                        <div class="flex">
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                            <i class="fas fa-star text-yellow-400 text-sm mx-0.5"></i>
+                        </div>
+                    </div>
+                    <p class="text-lg text-gray-700 mb-4">
+                        "Great to know that nowadays we can find someone who really cares about your situation."
+                    </p>
+                    <p class="text-gray-600 font-semibold">- Grateful Client</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Footer -->
+    <section class="bg-gray-800 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Ready to Get Started?
+                </h2>
+                <p class="text-xl text-gray-300 mb-8">Same-day response to all inquiries</p>
+                <a href="tel:757-561-6096" class="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold inline-block mr-4 mb-4">
+                    <i class="fas fa-phone mr-2"></i>
+                    Call (757) 561-6096
+                </a>
+                <a href="#consultation-form" class="bg-white text-gray-800 px-8 py-4 rounded-full text-lg font-semibold inline-block mb-4">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Book Consultation
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-home mr-2"></i>
+                        MR Rivera Realty
+                    </h3>
+                    <p class="text-gray-300 mb-2">Hampton Roads' Trusted Real Estate Team</p>
+                    <p class="text-gray-300">Serving Virginia Beach, Norfolk, Newport News, and surrounding areas</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-phone mr-2"></i>
+                        Contact Info
+                    </h3>
+                    <p class="text-gray-300 mb-2">
+                        <a href="tel:757-561-6096" class="hover:text-blue-400">Phone: (757) 561-6096</a>
+                    </p>
+                    <p class="text-gray-300">
+                        <a href="mailto:Info@MRRiveraRealty.com" class="hover:text-blue-400">Info@MRRiveraRealty.com</a>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-clock mr-2"></i>
+                        Our Promise
+                    </h3>
+                    <p class="text-gray-300 mb-2">✓ Same-day callback guaranteed</p>
+                    <p class="text-gray-300 mb-2">✓ Free consultation & analysis</p>
+                    <p class="text-gray-300">✓ Personalized service</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 MR Rivera Realty. Hampton Roads Real Estate Specialists.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Show loading state
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                alert('Thank you! We will contact you within 24 hours for your FREE consultation.');
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                event.target.reset();
+            }, 2000);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form validation
+        const inputs = document.querySelectorAll('input[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.classList.add('border-red-500');
+                } else {
+                    this.classList.remove('border-red-500');
+                    this.classList.add('border-green-500');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
